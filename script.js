@@ -11,4 +11,15 @@ const inputDuration = document.querySelector('.form__input--duration');
 const inputCadence = document.querySelector('.form__input--cadence');
 const inputElevation = document.querySelector('.form__input--elevation');
 
-const testTwoFactor = 'SEND IT';
+navigator.geolocation.getCurrentPosition(
+  function (position) {
+    const { latitude } = position.coords;
+    const { longitude } = position.coords;
+    console.log(`https://www.google.com/maps/@${latitude},${longitude}`);
+
+    // https://www.google.com/maps/@33.3601968,-86.7897111,15z
+  },
+  function () {
+    alert('Could not get your position');
+  }
+);
