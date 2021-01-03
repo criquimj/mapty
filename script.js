@@ -13,8 +13,6 @@ const inputElevation = document.querySelector('.form__input--elevation');
 
 let map, mapEvent;
 
-const testChange = 'This is a test';
-
 class App {
   #map;
   #mapEvent;
